@@ -1,0 +1,216 @@
+/* ==== Blog de Fitness Estilo Revista ==== */
+.blog {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .blog h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--color-texto);
+  }
+  
+  /* Sistema de filtros (radio buttons) */
+  .filtros-tags {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .filtros-tags label {
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: 2px solid var(--color-acento);
+    background-color: var(--color-acento);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--color-texto);
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+  .filtros-tags label:hover {
+    background: var(--color-primario);
+    color: var(--color-texto);
+  }
+  
+  .filtros-tags input[type="radio"]:checked + label {
+    background: var(--color-secundario);
+    color: var(--color-texto);
+  }
+  
+  /* Grid estilo periódico */
+  .articulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    gap: 2rem;
+    align-items: stretch;
+  }
+  
+  /* Estilo de cada artículo */
+  .post {
+    border: 1px solid;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: var(--color-secundario);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .post.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .post h3 {
+    margin-top: 0;
+    color: var(--color-texto);
+  }
+  
+  .post p {
+    color: var(--color-texto);
+  }
+  
+  /* Comentarios con avatar */
+  .comentarios {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--color-acento);
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ojos */
+  .avatar::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 5px;
+    height: 5px;
+    background: var(--color-claro);
+    border-radius: 50%;
+    box-shadow: 12px 0 var(--color-claro); /* Segundo ojo */
+  }
+  
+  /* Sonrisa */
+  .avatar::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 9px;
+    width: 22px;
+    height: 12px;
+    border-bottom: 2px solid var(--color-claro);
+    border-radius: 0 0 50% 50%;
+  }
+  
+  
+  /* Filtro de artículos por tag con solo CSS */
+input#nutricion:checked ~ .articulos .post:not(.nutricion),
+input#entrenamiento:checked ~ .articulos .post:not(.entrenamiento),
+input#salud:checked ~ .articulos .post:not(.salud) {
+  display: none;
+}
+@media (max-width: 768px) {
+  .blog {
+    padding: 1rem;
+  }
+
+  .blog h2 {
+    font-size: 2rem;
+  }
+
+  .filtros-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filtros-tags label {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .articulos {
+    grid-template-columns: 1fr; /* Solo una columna en pantallas pequeñas */
+  }
+
+  .post {
+    padding: 1rem;
+  }
+
+  .post h3 {
+    font-size: 1.2rem;
+  }
+
+  .post p {
+    font-size: 0.95rem;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .avatar::before {
+    width: 16px;
+    height: 8px;
+    top: 5px;
+    left: 8px;
+  }
+
+  .avatar::after {
+    width: 20px;
+    height: 12px;
+    bottom: 5px;
+    left: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog h2 {
+    font-size: 1.6rem;
+  }
+
+  .filtros-tags label {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .post h3 {
+    font-size: 1rem;
+  }
+
+  .post p {
+    font-size: 0.9rem;
+  }
+}
+
+
+  /*termina lo de css de blog*/
+  

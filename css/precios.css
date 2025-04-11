@@ -1,0 +1,186 @@
+/*precios pagina*/
+
+/* Página de Precios */
+.precios {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .precios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-texto);
+  }
+  
+  /* Toggle mensual/anual - visual tipo switch */
+  .toggle-plan {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+  .toggle-plan label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Texto a la izquierda del interruptor */
+  .etiqueta-toggle-text {
+    font-weight: bold;
+    color: var(--color-texto);
+  }
+  
+  /* Switch visual */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Fondo del interruptor */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  /* Bolita deslizante */
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--color-claro);
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  /* Activo */
+  .switch input:checked + .slider {
+    background-color: var(--color-acento);
+  }
+  
+  .switch input:checked + .slider::before {
+    transform: translateX(30px);
+  }
+  
+  
+  /* Tabla de precios */
+  .tabla-precios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .plan {
+    background: var(--color-secundario);
+    border: 2px solid var(--color-acento);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .plan:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-acento);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .plan.destacado {
+    background: linear-gradient(to bottom, var(--color-secundario), var(--color-acento));
+    border-color: var(--color-acento);
+  }
+  
+  .plan h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-texto);
+  }
+  
+  .plan .precio {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-claro);
+    margin-bottom: 1rem;
+  }
+  
+  .plan ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .plan li {
+    margin: 0.5rem 0;
+    position: relative;
+  }
+  
+  /* Tooltips */
+  .tooltip[data-tooltip] {
+    position: relative;
+    cursor: help;
+  }
+  
+  .tooltip[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    z-index: 10;
+  }
+  
+  .tooltip[data-tooltip]:hover::after {
+    opacity: 1;
+  }
+  
+  /* Botón */
+  .plan button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .plan button:hover {
+    background-color: var(--color-primario);
+  }
+  /*termina lo de precios*/

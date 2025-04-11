@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio VitalFit</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!--header con mega menu-->
+    <header>
+        <nav class="mega-menu">
+          <h1 class="logo-vitalfit">VitalFit</h1>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="clases.html">Clases</a></li>
+              <li><a href="entrenadores.html">Entrenadores</a></li>
+              <li><a href="precios.html">Precios</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+
+            <label class="switch">
+                <input type="checkbox" id="darkToggle">
+                <span class="slider"></span>
+              </label>
+
+          </nav>
+    </header>
+
+    <!-- hero con video y overlay-->
+     <section class="hero">
+        <video autoplay loop muted id="videofondo">
+            <source src="./assets/video/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+        </video>
+        <div class="ovrelay">
+            <h1 class="animado">Transforma Tu Cuerpo y Mente</h1>
+        </div>
+     </section>
+    
+     <!--clases destacadas-->
+     <section class="clases-destacadas">
+        <h2>Clases Destacadas</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="./assets/img/musculacion.jpg" alt="Clase de Funcional">
+            <h3>Musculación</h3>
+            <p>Entrenamiento de fuerza y resistencia adaptado.</p>
+          </article>
+          <article class="card">
+            <img src="./assets/img/crossfit.jpg" alt="Clase de Crossfit">
+            <h3>Crossfit</h3>
+            <p>Rutinas de alta intensidad para todos los niveles.</p>
+          </article>
+          <article class="card">
+            <img src="./assets/img/yoga.jpg" alt="Clase de Yoga">
+            <h3>Yoga</h3>
+            <p>Relajación, flexibilidad y conexión cuerpo-mente.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contador">
+        <div><span class="numero">500+</span><p>Socios Satisfechos</p></div>
+        <div><span class="numero">10</span><p>Años de Experiencia</p></div>
+        <div><span class="numero">20</span><p>Entrenadores Certificados</p></div>
+      </section>
+
+     <!--contador animado-->
+     <section class="testimonios">
+        <h2>Testimonios</h2>
+        <div class="carrusel-auto">
+          <div class="slide-auto">“Tiene una comunidad genial y los entrenadores son atentos. ¡Me encantó el ambiente del gym!” – Carla</div>
+          <div class="slide-auto">“Los entrenadores son excelentes.” – Martín</div>
+          <div class="slide-auto">“Me ayudó a cambiar mi vida.” – Laura</div>
+          <div class="slide-auto">“El lugar es muy limpio.” – Juan</div>
+        </div>
+      </section>
+
+     <!--footer-->
+     <footer>
+        <form id="newsletter">
+            <label for="email">Sucribite a nuestro newsletter</label>
+            <input type="email" id="email" placeholder="Ingrese su email">
+            <button type="submit">Suscribirme</button>
+        </form>
+
+        <div class="redes">
+            <a href="#"><img class="icono" src="./assets/iconos/face.png" alt="Facebook"></a>
+            <a href="#"><img class="icono" src="./assets/iconos/insta.png" alt="Instagram"></a>
+            <a href="#"><img class="icono" src="./assets/iconos/yt.png" alt="YouTube"></a>
+        </div>
+
+        <div class="mapa">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-58.5,-34.6,-58.3,-34.5" width="100%" height="300" frameborder="0"></iframe>
+        </div>
+     </footer>
+     <script src="./js/theme-toggle.js" defer></script>
+    
+</body>
+</html>

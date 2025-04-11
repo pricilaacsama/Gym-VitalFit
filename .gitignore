@@ -1,0 +1,31 @@
+# Archivos de configuración de VS Code
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos temporales o de respaldo
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Sistema operativo
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# npm (si algún día usás librerías como Bootstrap por npm)
+node_modules/
+
+# Directorios de compilación o distribución
+dist/
+build/
+
+# Archivos de entorno
+.env
+.env.local

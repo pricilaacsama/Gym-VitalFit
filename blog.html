@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Fitness - Gimnasio VitalFit</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/blog.css">
+</head>
+
+<body>
+  <header>
+    <nav class="mega-menu">
+      <h1 class="logo-vitalfit">VitalFit</h1>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="clases.html">Clases</a></li>
+          <li><a href="entrenadores.html">Entrenadores</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+        <label class="switch">
+            <input type="checkbox" id="darkToggle">
+            <span class="slider"></span>
+          </label>
+
+      </nav>
+</header>
+
+  <main>
+    <section class="blog">
+      <h2>Blog de Fitness</h2>
+
+      <input type="radio" name="filtro" id="todos" checked>
+      <input type="radio" name="filtro" id="nutricion">
+      <input type="radio" name="filtro" id="entrenamiento">
+      <input type="radio" name="filtro" id="salud">
+    
+      <div class="filtros-tags">
+        <label for="todos">Todos</label>
+        <label for="nutricion">Nutrición</label>
+        <label for="entrenamiento">Entrenamiento</label>
+        <label for="salud">Salud</label>
+      </div>
+
+      <div class="articulos">
+        <article class="post nutricion">
+          <img src="./assets/img/nutricion.jpg">
+          <h3>Alimentación pre y post entrenamiento</h3>
+          <p>Descubrí qué comer antes y después de entrenar para rendir al máximo. Proteínas, carbohidratos y la hidratación justa para tu cuerpo...</p>
+          <div class="comentarios">
+            <div class="avatar"></div>
+            <p><strong>Tomás:</strong> ¡Gran artículo! Me ayudó mucho.</p>
+          </div>
+        </article>
+
+        <article class="post entrenamiento">
+          <img src="./assets/img/entrenamiento.avif">
+          <h3>Rutina full body para principiantes</h3>
+          <p>Un entrenamiento completo en máquinas y peso corporal ideal para quienes recién comienzan. ¡No necesitás experiencia previa!...</p>
+          <div class="comentarios">
+            <div class="avatar"></div>
+            <p><strong>Lucía:</strong> ¡Voy a probarla esta semana!</p>
+          </div>
+        </article>
+
+        <article class="post salud">
+          <img src="./assets/img/descansando.avif">
+          <h3>Importancia del descanso</h3>
+          <p>El descanso muscular y mental es clave para mejorar el rendimiento, prevenir lesiones y mantener el equilibrio en tu rutina fitness...</p>
+          <div class="comentarios">
+            <div class="avatar"></div>
+            <p><strong>Florencia:</strong> No sabía que era tan importante. ¡Gracias!</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <form id="newsletter">
+        <label for="email">Sucribite a nuestro newsletter</label>
+        <input type="email" id="email" placeholder="Ingrese su email">
+        <button type="submit">Suscribirme</button>
+    </form>
+
+    <div class="redes">
+        <a href="#"><img class="icono" src="./assets/iconos/face.png" alt="Facebook"></a>
+        <a href="#"><img class="icono" src="./assets/iconos/insta.png" alt="Instagram"></a>
+        <a href="#"><img class="icono" src="./assets/iconos/yt.png" alt="YouTube"></a>
+    </div>
+
+    <div class="mapa">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-58.5,-34.6,-58.3,-34.5" width="100%" height="300" frameborder="0"></iframe>
+    </div>
+ </footer>
+ <script src="./js/blog.js"></script>
+ <script src="./js/theme-toggle.js"></script>
+ 
+
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+/* Variables CSS para colores pastel maduros */
+:root {
+  --color-primario: #CDE3EC;
+  --color-secundario: #1d8fac;
+  --color-tabla: #c7bea7;
+  --color-acento: #ffb703;
+  --color-texto: #000f16;
+  --color-fondo: #e6dacc;
+  --color-claro: #ffffff;
+  --color-footer: grey;
+  --color-texto-hover: white;
+  --color-titulo: #474646;
+  --color-modal-text: #12596C;
+  --font-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.dark {
+  --color-primario: #121212;
+  --color-claro: #000000;
+  --color-footer: rgb(53, 53, 53);
+  --color-texto: #f9f9f9;
+  --color-secundario: #441b1b;
+  --color-acento: brown;
+  --color-fondo: #1d4557;
+  --color-texto-hover: #ffb703;
+  --color-tabla: #441b1b;
+  --color-titulo: #CF4242;
+  --color-modal-text: #8E8E8E;
+}
+.logo-vitalfit{
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-titulo);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Segoe UI', 'Verdana', sans-serif;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--color-primario);
+  padding: 0.4rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav.mega-menu {
+  background-color: var(--color-primario, var(--color-fondo));
+}
+.card {
+  background-color: var(--color-secundario, var(--color-oscuro));
+  color: var(--color-texto);
+}
+.mega-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.mega-menu a {
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.mega-menu a:hover {
+  color: var(--color-acento);
+}
+
+/* NUEVO: Estilos del switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--color-claro);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--color-acento);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+footer {
+  background-color: var(--color-footer);
+  color: var(--color-texto);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+footer form#newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer input[type="email"] {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+footer button {
+  padding: 0.5rem;
+  background-color: var(--color-acento);
+  color: var(--color-texto);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-color: var(--color-primario);
+}
+.redes {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.redes a {
+  color: var(--color-texto);
+  margin-right: 1rem;
+  text-decoration: none;
+  margin: 0 10px;
+  display: inline-block;
+}
+.icono {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.icono:hover {
+  transform: scale(1.2);
+}
+.mapa iframe {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .mega-menu ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .logo-vitalfit {
+    font-size: 1.2rem;
+  }
+
+  .redes {
+    flex-direction: column;
+  }
+
+  .switch {
+    margin: 1rem auto;
+  }
+}

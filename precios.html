@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios - Gimnasio VitalFit</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/precios.css">
+</head>
+
+<body>
+  <header>
+    <nav class="mega-menu">
+      <h1 class="logo-vitalfit">VitalFit</h1>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="clases.html">Clases</a></li>
+          <li><a href="entrenadores.html">Entrenadores</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+        <label class="switch">
+            <input type="checkbox" id="darkToggle">
+            <span class="slider"></span>
+          </label>
+
+      </nav>
+</header>
+
+  <main>
+    <section class="precios">
+      <h2>Planes de Membresía</h2>
+      <div class="toggle-plan">
+        <label>
+          <span class="etiqueta-toggle-text" id="toggleText">Mensual</span>
+          <div class="switch">
+            <input type="checkbox" id="togglePrecios">
+            <span class="slider"></span>
+          </div>
+        </label>
+      </div>
+
+      <div class="tabla-precios">
+        <div class="plan">
+          <h3>Básico</h3>
+          <p class="precio" data-mensual="30" data-anual="300">$30/mes</p>
+          <ul>
+            <li>Acceso al gimnasio</li>
+            <li class="tooltip" data-tooltip="Incluye acceso ilimitado">Clases grupales</li>
+          </ul>
+          <button>Elegir Plan</button>
+        </div>
+
+        <div class="plan destacado">
+          <h3>Premium</h3>
+          <p class="precio" data-mensual="50" data-anual="500">$50/mes</p>
+          <ul>
+            <li>Acceso total</li>
+            <li class="tooltip" data-tooltip="Asistencia personalizada">Entrenamiento personal</li>
+          </ul>
+          <button>Elegir Plan</button>
+        </div>
+
+        <div class="plan">
+          <h3>Full</h3>
+          <p class="precio" data-mensual="70" data-anual="700">$70/mes</p>
+          <ul>
+            <li>Acceso total</li>
+            <li class="tooltip" data-tooltip="Incluye análisis de progreso">Nutrición personalizada</li>
+          </ul>
+          <button>Elegir Plan</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <form id="newsletter">
+        <label for="email">Sucribite a nuestro newsletter</label>
+        <input type="email" id="email" placeholder="Ingrese su email">
+        <button type="submit">Suscribirme</button>
+    </form>
+
+    <div class="redes">
+        <a href="#"><img class="icono" src="./assets/iconos/face.png" alt="Facebook"></a>
+        <a href="#"><img class="icono" src="./assets/iconos/insta.png" alt="Instagram"></a>
+        <a href="#"><img class="icono" src="./assets/iconos/yt.png" alt="YouTube"></a>
+    </div>
+
+    <div class="mapa">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-58.5,-34.6,-58.3,-34.5" width="100%" height="300" frameborder="0"></iframe>
+    </div>
+ </footer>
+ <script src="./js/theme-toggle.js"></script>
+ <script src="./js/precios.js"></script>
+</body>
+
+</html>

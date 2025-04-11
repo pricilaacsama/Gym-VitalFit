@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clases - Gimnasio VitalFit</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/clases.css">
+</head>
+<body>
+  <header>
+    <nav class="mega-menu">
+      <h1 class="logo-vitalfit">VitalFit</h1>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="clases.html">Clases</a></li>
+          <li><a href="entrenadores.html">Entrenadores</a></li>
+          <li><a href="precios.html">Precios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+        <label class="switch">
+            <input type="checkbox" id="darkToggle">
+            <span class="slider"></span>
+          </label>
+
+      </nav>
+</header>
+
+    <input type="radio" name="filtro" id="todos" checked>
+        <input type="radio" name="filtro" id="musculacion">
+        <input type="radio" name="filtro" id="crossfit">
+        <input type="radio" name="filtro" id="yoga">
+        <input type="radio" name="filtro" id="spinning">
+
+    <section class="filters-section">
+      <h2>Filtrar por Categoría</h2>
+
+      <div class="filter-labels">
+          <label for="todos">Mostrar Todos</label>
+          <label for="musculacion">Musculación</label>
+          <label for="crossfit">CrossFit</label>
+          <label for="yoga">Yoga</label>
+          <label for="spinning">Spinning</label>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Nuestras Clases</h2>
+      <div class="classes-grid">
+        <div class="class-card cat-musculacion" data-category="musculacion">
+          <img src="./assets/img/musculacion.jpg" alt="Clase de Musculación">
+          <div class="card-overlay">
+            <h3>Musculación Intensiva</h3>
+            <p>Fortalece tu cuerpo con nuestro entrenadores</p>
+          </div>
+        </div>
+
+        <div class="class-card cat-crossfit">
+          <img src="./assets/img/crossfit.jpg" alt="Clase de CrossFit">
+          <div class="card-overlay">
+            <h3>CrossFit Nivel Intermedio</h3>
+            <p>Entrenamientos intensos</p>
+          </div>
+        </div>
+
+        <div class="class-card cat-yoga" data-category="yoga">
+          <img src="./assets/img/yoga.jpg" alt="Clase de Yoga">
+          <div class="card-overlay">
+            <h3>Yoga para Principiantes</h3>
+            <p>Equilibra tu cuerpo y mente con posturas</p>
+          </div>
+        </div>
+
+        <div class="class-card cat-spinning" data-category="spinning">
+          <img src="./assets/img/spinning2.jpg" alt="Clase de Spinning">
+          <div class="card-overlay">
+            <h3>Spinning Avanzado</h3>
+            <p>Pedalea al ritmo de la musica</p>
+          </div>
+        </div>
+
+        <div class="class-card cat-musculacion" data-category="musculacion">
+          <img src="./assets/img/funcional1.webp" alt="Otra Clase de Musculación">
+          <div class="card-overlay">
+            <h3>Musculación Funcional</h3>
+            <p>Mejora tu masa muscular y rendimiento</p>
+          </div>
+        </div>
+
+        <div class="class-card cat-yoga" data-category="yoga">
+          <img src="./assets/img/yogaterapeuta.jpg" alt="Clase de Yoga Terapéutico">
+          <div class="card-overlay">
+            <h3>Yoga Terapéutico</h3>
+            <p>Mejora tu concentracion y equilibrio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule-table-section">
+      <h2>Horario Semanal</h2>
+      <div class="schedule-table-container">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Hora</th>
+              <th>Clase</th>
+              <th>Instructor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Día">Lunes</td>
+              <td data-label="Hora">18:00 - 19:00</td>
+              <td data-label="Clase">Musculación Intensiva</td>
+              <td data-label="Instructor">Juan Pérez</td>
+            </tr>
+            <tr>
+              <td data-label="Día">Martes</td>
+              <td data-label="Hora">19:30 - 20:30</td>
+              <td data-label="Clase">CrossFit Nivel Intermedio</td>
+              <td data-label="Instructor">Sofia Gomez</td>
+            </tr>
+            <tr>
+              <td data-label="Día">Miércoles</td>
+              <td data-label="Hora">10:00 - 11:00</td>
+              <td data-label="Clase">Yoga para Principiantes</td>
+              <td data-label="Instructor">Ana García</td>
+            </tr>
+            <tr>
+              <td data-label="Día">Martes</td>
+              <td data-label="Hora">11:00 - 12:00</td>
+              <td data-label="Clase">Spinning Avanzado</td>
+              <td data-label="Instructor">Carlos López</td>
+            </tr>
+            <tr>
+              <td data-label="Día">Jueves</td>
+              <td data-label="Hora">17:00 - 18:00</td>
+              <td data-label="Clase">Musculación Funcional</td>
+              <td data-label="Instructor">Juan Perez</td>
+            </tr>
+            <tr>
+              <td data-label="Día">Viernes</td>
+              <td data-label="Hora">16:00 - 17:00</td>
+              <td data-label="Clase">Yoga Terapéutico</td>
+              <td data-label="Instructor">Ana García</td>
+            </tr>
+            <tr>
+              <td data-label="Día">Sábado</td>
+              <td data-label="Hora">11:00 - 12:00</td>
+              <td data-label="Clase">Spinning Avanzado</td>
+              <td data-label="Instructor">Carlos López</td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <form id="newsletter">
+          <label for="email">Sucribite a nuestro newsletter</label>
+          <input type="email" id="email" placeholder="Ingrese su email">
+          <button type="submit">Suscribirme</button>
+      </form>
+
+      <div class="redes">
+          <a href="#"><img class="icono" src="./assets/iconos/face.png" alt="Facebook"></a>
+          <a href="#"><img class="icono" src="./assets/iconos/insta.png" alt="Instagram"></a>
+          <a href="#"><img class="icono" src="./assets/iconos/yt.png" alt="YouTube"></a>
+      </div>
+
+      <div class="mapa">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-58.5,-34.6,-58.3,-34.5" width="100%" height="300" frameborder="0"></iframe>
+      </div>
+   </footer>
+ <script src="./js/theme-toggle.js" defer></script>
+
+</body>
+</html>
